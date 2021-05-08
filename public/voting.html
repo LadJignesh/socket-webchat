@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/voting-style.css" />
+    <title>Voting</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Sprinter App</span>
+            <div class="mr-sm-5">
+                <a href="index.html" class="leave-room-link">Leave Room</a> |
+                <span id="room-name"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container voting-container">
+
+        <div class="alert alert-info" role="alert" id="topicAlerts">
+        </div>
+        <form id="voting-form">
+            <div class="row">
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">0</h1>
+                            <input type="radio" class="vote-input" name="vote" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">1</h1>
+                            <input type="radio" class="vote-input" name="vote" value="1">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">3</h1>
+                            <input type="radio" class="vote-input" name="vote" value="3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">5</h1>
+                            <input type="radio" class="vote-input" name="vote" value="5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">8</h1>
+                            <input type="radio" class="vote-input" name="vote" value="8">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">13</h1>
+                            <input type="radio" class="vote-input" name="vote" value="13">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">21</h1>
+                            <input type="radio" class="vote-input" name="vote" value="21">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 card-container">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h1 class="voting-numbers">?</h1>
+                            <input type="radio" class="vote-input" name="vote" value="?">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center"style="padding-bottom:2rem;">
+                    <button type="submit" class="btn btn-primary" id="submitBtn"><i class="fas fa-paper-plane"></i> Submit Vote</button>
+                </div>
+
+            </div>
+            
+        </form>
+    </div>
+
+
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/voting.js"></script>
+</body>
+
+</html>

@@ -12,7 +12,7 @@ const io = socketio(server);
 // Set Static folder
 app.use(express.static(path.join(__dirname, '/public')));
 
-const botName = 'Sprinter';
+const botName = 'ChatCord Bot';
 
 // Run when client connects
 io.on('connection', socket => {
@@ -25,12 +25,7 @@ io.on('connection', socket => {
 
 
         // Welcomes current user
-        if(username === "admin"){
-            socket.emit('welcomeMessage', formatmessage(botName, 'Welcome to Admin Page for ' + room));
-        }else{
-            socket.emit('welcomeMessage', formatmessage(botName, 'Welcome to Sprinter. You will be able to vote once the server sends topic to vote on!!'));
-        }
-        
+        socket.emit('message', formatmessage(botName, 'Welcome to chatCord'));
 
         // Broadcast when user connects
         socket.broadcast
@@ -48,17 +43,10 @@ io.on('connection', socket => {
     });
 
     // Listen for chatMessage
-    socket.on('voteMessage', (msg) => {
+    socket.on('chatMessage', (msg) => {
         const user = getCurrentUser(socket.id);
 
-        io.to(user.room).emit('voteMessage', formatmessage(user.username, msg));
-    });
-
-    // Listen for topics
-    socket.on('topic', (msg) => {
-        const user = getCurrentUser(socket.id);
-
-        io.to(user.room).emit('topic', formatmessage(user.username, msg));
+        io.to(user.room).emit('message', formatmessage(user.username, msg));
     });
 
     // Broadcast when user disconnects
