@@ -82,8 +82,8 @@ io.on('connection', socket => {
     });
 });
 
-const PORT = 3000 || process.env.PORT;
+const port = 3000 || process.env.PORT;
 
-server.listen(PORT, () => {
-    console.log(`Server now listening for request on port ${PORT}`);
+server.listen(port, () => {
+    console.log('app now listening for request on port 3000');
 });
